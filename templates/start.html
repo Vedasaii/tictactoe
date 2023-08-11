@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container start-container">
+        <h1>Tic-Tac-Toe</h1>
+        <p>Click the button below to start the game:</p>
+        <form action="/start_game">
+            <button class="start-btn" type="submit">Start Game</button>
+        </form>
+    </div>
+</body>
+</html>

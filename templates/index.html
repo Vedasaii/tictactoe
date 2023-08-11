@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container game-container">
+        <h1>Tic-Tac-Toe</h1>
+        <form method="GET" action="/make_move">
+            <table>
+                <tr>
+                    <td><button type="submit" name="position" value="0">{{ board[0] }}</button></td>
+                    <td><button type="submit" name="position" value="1">{{ board[1] }}</button></td>
+                    <td><button type="submit" name="position" value="2">{{ board[2] }}</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" name="position" value="3">{{ board[3] }}</button></td>
+                    <td><button type="submit" name="position" value="4">{{ board[4] }}</button></td>
+                    <td><button type="submit" name="position" value="5">{{ board[5] }}</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" name="position" value="6">{{ board[6] }}</button></td>
+                    <td><button type="submit" name="position" value="7">{{ board[7] }}</button></td>
+                    <td><button type="submit" name="position" value="8">{{ board[8] }}</button></td>
+                </tr>
+            </table>
+        </form>
+        <p class="message">{{ message }}</p>
+        <form method="POST" action="/restart_game">
+            <button class="restart-btn" type="submit">Try Again</button>
+        </form>
+    </div>
+</body>
+</html>
